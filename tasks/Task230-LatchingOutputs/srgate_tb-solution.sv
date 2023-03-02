@@ -55,15 +55,15 @@ begin
 end
 
 //This block only runs when S or R **change**
-always @(S,R)
-begin
-	$display("{S,R}={%b,%b}", S, R);
-end
+//always @(S,R)
+//begin
+//	$display("{S,R}={%b,%b}", S, R);
+//end
 
 //This block only runs when Q changes
-always @(Q)
-begin
-	$display("Q => %b", Q);
-end
+//always @(Q)
+//begin
+//	$display("Q => %b", Q);
+//end
 
 endmodule

@@ -1,0 +1,53 @@
+module srgate_tb;
+
+logic qq, qqb ss, rr;
+
+
+srgate u1(qq, qqb, ss, rr);
+
+
+initial
+begin
+
+ss= 1'b1;
+rr= 1'b0;
+
+assert ((qq == 1'b1) && (qqb == 1'b0))
+	$display ("pass");
+	else
+	$display ("fail");
+
+ss= 1'b0;
+
+assert ((qq == 1'b1) && (qqb == 1'b0))
+	$display ("pass");
+	else
+	$display ("fail");
+
+rr= 1'b1;
+
+assert ((qq == 1'b0) && (qqb == 1'b1))
+	$display ("pass");
+	else
+	$display ("fail");
+
+rr= 1'b0;
+
+
+assert ((qq == 1'b0) && (qqb == 1'b1))
+	$display ("pass");
+	else
+	$display ("fail");
+
+ss= 1'b1;
+rr= 1'b1;
+
+assert ((qq == z) && (qqb == z))
+	$display ("pass");
+	else
+	$display ("fail");
+
+end
+
+endmodule
+
